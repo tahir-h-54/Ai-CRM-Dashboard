@@ -1,6 +1,11 @@
 import {useState} from 'react';
 import {Link,useNavigate, useLocation} from 'react-router-dom';
+import {useForm} from "react-hook-form";
 import {toast} from "sonner";
+import {Mail, Lock} from "lucide-react";
+import {AuthShell} from "./AuthShell";
+import {Button, Field, Input} from "../../components/ui";
+import {useAuth} from "../../context/AuthContext";
 
 export default function Login() {
     const {login} = useAuth();
@@ -41,7 +46,7 @@ export default function Login() {
                 </Field>
                 <Field label='Password' error={errors.password?.message}>
                     <div className='relative'>
-                        <Look className='absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-soft' />
+                        <Lock className='absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-soft' />
                         <Input type='email' placeholder='*******' className='pl-9' {...register('password',{required:'Password is required'})} />
                     </div>
                 </Field>
