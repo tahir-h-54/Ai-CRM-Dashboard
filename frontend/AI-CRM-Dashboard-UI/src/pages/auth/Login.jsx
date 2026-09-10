@@ -58,7 +58,7 @@ export default function Login() {
                 Try the demo account 
             </button>
             <p className='mt-6 text-center text-sm text-ink-soft'>
-                Don't have an account?{""}
+                Don't have an account?{" "}
                 <Link to='/register' className='font-semibold text-brand-700 hover:underline'>
                     Create One
                 </Link>
